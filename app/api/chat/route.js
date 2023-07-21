@@ -26,6 +26,7 @@ export async function POST(req) {
       },
       ...messages,
     ],
+    max_tokens: 100,
   });
   // Convert the response into a friendly text-stream
   const stream = OpenAIStream(response);
